@@ -359,7 +359,7 @@ func (cm *BasicConnMgr) getConnsToClose() []network.Conn {
 
 	target := ncandidates - cm.cfg.lowWater
 
-	// slightly overallocate because we may have more than one conns per peer
+	// slightly over allocate because we may have more than one conns per peer
 	selected := make([]network.Conn, 0, target+10)
 
 	for _, inf := range candidates {
